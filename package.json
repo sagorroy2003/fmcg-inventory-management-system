@@ -1,0 +1,31 @@
+{
+  "name": "fmcg-inventory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagorroy2003/fmcg-inventory.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagorroy2003/fmcg-inventory/issues"
+  },
+  "homepage": "https://github.com/sagorroy2003/fmcg-inventory#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.17.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
