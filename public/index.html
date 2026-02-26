@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FMCG Inventory System</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="layout">
+            <aside class="sidebar">
+                <h2 class="sidebar__logo">📦 FMCG Admin</h2>
+                <nav class="sidebar__nav">
+                    <a href="#" class="nav-link nav-link--active">Inventory</a>
+                    <a href="#" class="nav-link">Sales</a>
+                    <a href="#" class="nav-link">Suppliers</a>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+                <header class="header">
+                    <h1 class="header__title">Product Inventory</h1>
+                    <button class="btn btn--primary" id="btn-add-product">+ Add
+                        Product</button>
+                </header>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="table__header">ID</th>
+                                <th class="table__header">Product Name</th>
+                                <th class="table__header">SKU</th>
+                                <th class="table__header">Price (৳)</th>
+                                <th class="table__header">Stock</th>
+                                <th class="table__header">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="product-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+
+        <script src="/js/app.js"></script>
+    </body>
+</html>
