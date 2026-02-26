@@ -42,7 +42,7 @@ cd fmcg-inventory-management-system
 npm install
 
 # 3. Configure environment variables
-cp .env.example .env   # then fill in your DB credentials
+touch .env   # then open .env and add your DB credentials (see config/db.js for required keys)
 
 # 4. Start the development server
 npm run dev
