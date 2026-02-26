@@ -80,14 +80,15 @@ fmcg-inventory-management-system/
 
 ## 🔌 API Endpoints
 
-| Method | Endpoint          | Description        |
-|--------|-------------------|--------------------|
-| GET    | /api/products     | List all products  |
-| GET    | /api/suppliers    | List all suppliers |
-| GET    | /api/customers    | List all customers |
-| GET    | /api/sales        | List all sales     |
-| GET    | /api/health       | Server health check|
+The table below lists the base collection GET routes exposed by the API. Additional HTTP methods (such as `POST /`) and subpaths (for example `/low-stock`, `/reports/monthly`, etc.) are also available under these prefixes; refer to the route files in `routes/` for the full set of endpoints.
 
+| Method | Endpoint          | Description         |
+|--------|-------------------|---------------------|
+| GET    | /api/products     | List all products   |
+| GET    | /api/suppliers    | List all suppliers  |
+| GET    | /api/customers    | List all customers  |
+| GET    | /api/sales        | List all sales      |
+| GET    | /api/health       | Server health check |
 ---
 
 ## 📜 License
