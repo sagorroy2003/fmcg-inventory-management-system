@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales & POS - FMCG System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /* Specific layout for the Point of Sale screen */
+        .pos-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        .product-card {
+            background: white; padding: 15px; border-radius: 8px;
+            border: 1px solid var(--color-border);
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 10px;
+        }
+        .cart-panel {
+            background: white; padding: 20px; border-radius: 8px;
+            border: 1px solid var(--color-border);
+            position: sticky; top: 20px;
+        }
+        .cart-item {
+            display: flex; justify-content: space-between;
+            border-bottom: 1px solid #eee; padding: 10px 0;
+        }
+        .cart-totals { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <h2 class="sidebar__logo">📦 FMCG Admin</h2>
+            <nav class="sidebar__nav">
+                <a href="/index.html" class="nav-link">Inventory</a>
+                <a href="/sales.html" class="nav-link nav-link--active">Sales</a>
+                <a href="/reports.html" class="nav-link">Reports</a>
+                <a href="/suppliers.html" class="nav-link">Suppliers</a>
+                <a href="/customers.html" class="nav-link">Customers</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1 class="header__title">Point of Sale (New Order)</h1>
+            </header>
+
+            <div class="pos-grid">
+                <div>
+                    <h3>Available Products</h3>
+                    <div id="pos-product-list" style="margin-top: 15px;">
+                        </div>
+                </div>
+
+                <div class="cart-panel">
+                    <h3>Current Order</h3>
+                    <div id="cart-items" style="margin-top: 15px; min-height: 200px;">
+                        <p style="color: gray;">Cart is empty</p>
+                    </div>
+                    
+                    <div class="cart-totals">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Tax (5%):</span> <span id="cart-tax">৳0.00</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 1.2rem; color: var(--color-primary); margin-top: 10px;">
+                            <span>Total:</span> <span id="cart-total">৳0.00</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary" id="btn-checkout" style="width: 100%; margin-top: 20px;">Complete Sale</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/sales.js"></script>
+</body>
+</html>
