@@ -11,9 +11,11 @@
             <aside class="sidebar">
                 <h2 class="sidebar__logo">📦 FMCG Admin</h2>
                 <nav class="sidebar__nav">
-                    <a href="#" class="nav-link nav-link--active">Inventory</a>
-                    <a href="#" class="nav-link">Sales</a>
-                    <a href="#" class="nav-link">Suppliers</a>
+                    <a href="/index.html" class="nav-link nav-link--active">Inventory</a>
+                    <a href="/sales.html" class="nav-link">Sales</a>
+                    <a href="/reports.html" class="nav-link">Reports</a>
+                    <a href="/suppliers.html" class="nav-link">Suppliers</a>
+                    <a href="/customers.html" class="nav-link">Customers</a>
                 </nav>
             </aside>
 
@@ -34,6 +36,7 @@
                                 <th class="table__header">Price (৳)</th>
                                 <th class="table__header">Stock</th>
                                 <th class="table__header">Status</th>
+                                <th class="table__header">Actions</th>
                             </tr>
                         </thead>
                         <tbody id="product-table-body">
@@ -41,6 +44,54 @@
                     </table>
                 </div>
             </main>
+        </div>
+
+        <div class="modal" id="addProductModal">
+            <div class="modal__content">
+                <div class="modal__header">
+                    <h2>Add New Product</h2>
+                    <button class="btn-close"
+                        id="btn-close-modal">&times;</button>
+                </div>
+
+                <form id="add-product-form" class="form">
+                    <div class="form__group">
+                        <label>Product Name</label>
+                        <input type="text" id="input_name"
+                            placeholder="e.g. Radhuni Beef Masala" required>
+                    </div>
+                    <div class="form__group">
+                        <label>SKU</label>
+                        <input type="text" id="input_sku"
+                            placeholder="RAD-BEEF-001" required>
+                    </div>
+                    <div class="form__group">
+                        <label>Category</label>
+                        <input type="text" id="input_category"
+                            placeholder="Spices" required>
+                    </div>
+                    <div class="form__group">
+                        <label>Unit</label>
+                        <input type="text" id="input_unit"
+                            placeholder="piece, kg, packet" required>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <div class="form__group" style="flex: 1;">
+                            <label>Unit Price (৳)</label>
+                            <input type="number" id="input_price" step="0.01"
+                                required>
+                        </div>
+                        <div class="form__group" style="flex: 1;">
+                            <label>Cost Price (৳)</label>
+                            <input type="number" id="input_cost" step="0.01"
+                                required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn--primary"
+                        style="width: 100%; margin-top: 15px;">Save
+                        Product</button>
+                </form>
+            </div>
         </div>
 
         <script src="/js/app.js"></script>

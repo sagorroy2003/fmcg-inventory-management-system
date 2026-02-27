@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers - FMCG System</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <h2 class="sidebar__logo">📦 FMCG Admin</h2>
+            <nav class="sidebar__nav">
+                <a href="/index.html" class="nav-link">Inventory</a>
+                <a href="/sales.html" class="nav-link">Sales</a>
+                <a href="/reports.html" class="nav-link">Reports</a>
+                <a href="/suppliers.html" class="nav-link nav-link--active">Suppliers</a>
+                <a href="/customers.html" class="nav-link">Customers</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1 class="header__title">Supplier Management</h1>
+                <button class="btn btn--primary" id="btn-add-supplier">+ Add Supplier</button>
+            </header>
+
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="table__header">ID</th>
+                            <th class="table__header">Supplier Name</th>
+                            <th class="table__header">Contact Person</th>
+                            <th class="table__header">Products Supplied</th>
+                            <th class="table__header">Revenue Generated</th>
+                        </tr>
+                    </thead>
+                    <tbody id="supplier-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal" id="addSupplierModal">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2>Add New Supplier</h2>
+                <button class="btn-close" id="btn-close-modal">&times;</button>
+            </div>
+            
+            <form id="add-supplier-form" class="form">
+                <div class="form__group">
+                    <label>Company Name</label>
+                    <input type="text" id="sup_name" placeholder="e.g. Meghna Group" required>
+                </div>
+                <div class="form__group">
+                    <label>Contact Person</label>
+                    <input type="text" id="sup_contact" placeholder="e.g. Abul Kalam" required>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <div class="form__group" style="flex: 1;">
+                        <label>Email</label>
+                        <input type="email" id="sup_email" placeholder="contact@meghna.com" required>
+                    </div>
+                    <div class="form__group" style="flex: 1;">
+                        <label>Phone</label>
+                        <input type="text" id="sup_phone" placeholder="017..." required>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <label>Address</label>
+                    <input type="text" id="sup_address" placeholder="123 Industrial Area" required>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <div class="form__group" style="flex: 1;">
+                        <label>City</label>
+                        <input type="text" id="sup_city" placeholder="Dhaka" required>
+                    </div>
+                    <div class="form__group" style="flex: 1;">
+                        <label>State/Division</label>
+                        <input type="text" id="sup_state" placeholder="Dhaka" required>
+                    </div>
+                    <div class="form__group" style="flex: 1;">
+                        <label>Postal Code</label>
+                        <input type="text" id="sup_postal" placeholder="1000" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: 15px;">Save Supplier</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/suppliers.js"></script>
+</body>
+</html>

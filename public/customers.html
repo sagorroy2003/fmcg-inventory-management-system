@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers - FMCG System</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <h2 class="sidebar__logo">📦 FMCG Admin</h2>
+            <nav class="sidebar__nav">
+                <a href="/index.html" class="nav-link">Inventory</a>
+                <a href="/sales.html" class="nav-link">Sales</a>
+                <a href="/reports.html" class="nav-link">Reports</a>
+                <a href="/suppliers.html" class="nav-link">Suppliers</a>
+                <a href="/customers.html" class="nav-link nav-link--active">Customers</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1 class="header__title">Customer Directory</h1>
+                <button class="btn btn--primary" id="btn-add-customer">+ Add Customer</button>
+            </header>
+
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="table__header">ID</th>
+                            <th class="table__header">Name</th>
+                            <th class="table__header">Contact Info</th>
+                            <th class="table__header">Customer Type</th>
+                            <th class="table__header">Location</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customer-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal" id="addCustomerModal">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2>Register New Customer</h2>
+                <button class="btn-close" id="btn-close-modal">&times;</button>
+            </div>
+            
+            <form id="add-customer-form" class="form">
+                <div style="display: flex; gap: 10px;">
+                    <div class="form__group" style="flex: 1;">
+                        <label>First Name</label>
+                        <input type="text" id="cust_first_name" placeholder="John" required>
+                    </div>
+                    <div class="form__group" style="flex: 1;">
+                        <label>Last Name</label>
+                        <input type="text" id="cust_last_name" placeholder="Doe" required>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 10px;">
+                    <div class="form__group" style="flex: 1;">
+                        <label>Email (Optional)</label>
+                        <input type="email" id="cust_email" placeholder="john@example.com">
+                    </div>
+                    <div class="form__group" style="flex: 1;">
+                        <label>Phone</label>
+                        <input type="text" id="cust_phone" placeholder="017..." required>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <label>Customer Type</label>
+                    <select id="cust_type" style="width: 100%; padding: 10px; border: 1px solid var(--color-border); border-radius: 6px; font-size: 1rem; outline: none; background: white;">
+                        <option value="walk-in">Walk-in</option>
+                        <option value="student">Student</option>
+                        <option value="staff">Staff</option>
+                        <option value="wholesale">Wholesale</option>
+                    </select>
+                </div>
+
+                <div class="form__group">
+                    <label>City</label>
+                    <input type="text" id="cust_city" placeholder="e.g. Noakhali">
+                </div>
+
+                <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: 15px;">Save Customer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/customers.js"></script>
+</body>
+</html>
